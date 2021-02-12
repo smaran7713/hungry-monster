@@ -1,0 +1,58 @@
+.container{
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+}
+input,button{
+    /* border: 1px; */
+    font-size: 14px;
+    padding: 8px 10px;
+    margin: 0;
+}
+.search-btn{
+    /* cursor: pointer; */
+    background-color: orange;
+}
+.meals{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+.meal{
+    cursor: pointer;
+    position: relative;
+    height: 180px;
+    width: 180;
+    text-align: center;
+}
+.meal img{
+    width: 100%;
+    height: 100%;
+    border: 4px solid black;
+    border-radius: 2px;
+}
+.meal-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in;
+    opacity: 0;
+}
+.meal:hover .meal-info{
+    opacity: 1;
+}
